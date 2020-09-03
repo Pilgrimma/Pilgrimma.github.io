@@ -1,0 +1,149 @@
+/* 
+TO DO:
+- Add clickable image map
+- Create About page
+- Create a mobile display (shorter header, left-side show/unshow navigation vertically)
+*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgb(85, 90, 208);
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif; /* Arial is one of the Sans-serif styles, which is considered easier to read then Serif styles like Times New Roman */
+	font-size: 100%;
+}
+
+p {
+	font-size: 1em;
+}
+
+#card {
+	display: block;
+	margin: auto;
+}
+
+.page {
+	margin: auto;
+	width: 80%;
+	min-height: 1000px;
+	border-style: solid;
+	border-color: rgb(255, 255, 105);
+	border-width: 0px 10px;
+	background-color: rgba(235, 235, 235, 0.8);
+}
+
+.header {
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/27/Leiden%2C_boerderij_aan_Rijn-Schiekanaal.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 250px;
+	margin: auto;
+	position: relative;
+}
+
+.header img {
+	height: inherit;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* The text is set to an absolute position and the position of the header to relative, so that the text can get on the image in the header. The width is set to 100%, so that the
+text-align set to center will center the text to the actual center of the page. The top property is given to make sure that the text is set to the right distance from the top. */
+.header h1 {
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	top: 20%;
+	line-height: 1.7;
+}
+
+/* Used for active nav tab. */
+.active {
+	background-color: red;
+	color: white;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	/* Not sure why, but 'overflow: hidden' makes sure that the navigation bar goes across the page entirely. */
+	overflow: hidden;
+	background-color: black;
+}
+
+/* An alternative is to use 'display: inline' instead of float, but the problem with that is that a space between the list items appears. */
+.normal li {
+	float: left;
+	list-style-type: none;
+	background-color: black;
+}
+
+nav {
+	color: white;
+}
+
+nav a:link {
+	border-right: 1px solid white;
+	display: block;
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	padding: 15px;
+	text-align: center;
+}
+
+nav a:visited {
+	text-decoration: none;
+	color: white;	
+}
+
+nav a:hover:not(.active) {
+	text-decoration: none;
+	color: black;
+	background-color: white;
+}
+
+nav a:active {
+	text-decoration: none;
+	background-color: red;
+	color: white;
+}
+
+.side {
+	width: 20%;
+	height: 100%;
+	display: none;
+	float: left;
+}
+
+figure {
+	float: left;
+	box-sizing: border-box;
+	border-radius: 5px;
+	background-color: rgba(217, 244, 252, 0.5);
+	display: inline-block;
+	padding: 20px;
+	width: 22%;
+	margin: 10px;
+}
+
+figure img {
+	width: 100%;
+}
+
+figure img:hover {
+	opacity: 0.5;
+}
+
+@media only screen and (max-width: 600px) {
+	.page {margin-right: 0;}
+	.header {height: 100px;}
+	.normal {display: none;}
+	.side {display: block;}
+	nav a:link {border-right: 0px solid white;}
+}
