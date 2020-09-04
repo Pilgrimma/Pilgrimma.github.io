@@ -10,13 +10,8 @@ body {
 	font-size: 100%;
 }
 
-p {
-	font-size: 1em;
-	padding: 10px;
-}
-
-h1, h2, h3 {
-	padding: 10px;
+#mainpage {
+	padding: 20px;
 }
 
 #card {
