@@ -1,10 +1,3 @@
-/* 
-TO DO:
-- Add clickable image map
-- Create About page
-- Create a mobile display (shorter header, left-side show/unshow navigation vertically)
-*/
-
 * {
 	box-sizing: border-box;
 }
@@ -19,6 +12,11 @@ body {
 
 p {
 	font-size: 1em;
+	padding: 8px;
+}
+
+h1, h2, h3 {
+	padding: 8px;
 }
 
 #card {
